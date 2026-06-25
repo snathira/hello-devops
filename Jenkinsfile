@@ -50,7 +50,7 @@ client = app.app.test_client()
 # Test root endpoint
 r = client.get('/')
 assert r.status_code == 200, f'Expected 200, got {r.status_code}'
-assert b'Hello' in r.data, 'Missing Hello in response'
+assert b'Vanakkam' in r.data, 'Missing Hello in response'
 
 # Test health endpoint
 r = client.get('/health')
