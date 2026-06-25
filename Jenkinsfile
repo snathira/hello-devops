@@ -99,7 +99,7 @@ print('All tests passed.')
             steps {
                 echo "Smoke testing the live container..."
                 sh """
-                    STATUS=\$(curl -s -o /dev/null -w '%{http_code}' http://localhost:${APP_PORT}/health)
+                    STATUS=\$(curl -s -o /dev/null -w '%{http_code}' http://host.docker.internal:${APP_PORT}/health)
                     if [ "\$STATUS" != "200" ]; then
                         echo "Smoke test FAILED — /health returned \$STATUS"
                         exit 1
