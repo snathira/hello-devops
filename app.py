@@ -24,7 +24,7 @@ def hello():
     start = time.time()
 
     response = jsonify({
-        "message": "Hello, Nathira Salim!",
+        "message": "Vanakkam, Nathira Salim!",
         "status": "ok"
     })
 
